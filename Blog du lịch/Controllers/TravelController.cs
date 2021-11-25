@@ -32,5 +32,28 @@ namespace Blog_du_lịch.Controllers
                 return View(s);
             }
         }    
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var trv = _service.Get(id);
+            if (trv == null)
+            {
+                return NotFound();
+
+            }
+            else
+            {
+                return View(trv);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Travel travel)
+        {
+            _service.Delete(travel.Id);
+            _service.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

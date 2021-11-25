@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ArrayOfTravel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Travel>
+    <Id>2</Id>
+    <Name>Vịnh Hạ Long</Name>
+    <Adress>Quảng Ninh,Việt Nam</Adress>
+    <Year>1994</Year>
+    <Descriptions>Vịnh Hạ Long là một vịnh nhỏ thuộc phần bờ tây vịnh Bắc Bộ tại khu vực biển Đông Bắc Việt Nam, bao gồm vùng biển đảo của thành phố Hạ Long thuộc tỉnh Quảng Ninh.</Descriptions>
+    <Emotions>Một lần đến Vịnh hạ Long tôi đã tham quan và khám phá các Hòn Trống Mái, Hòn Con Cóc, Hang Sửng Sốt… trải nghiệm chèo thuyền kayak quanh các hòn đảo chiêm ngưỡng vẻ đẹp của rừng và biển. </Emotions>
+  </Travel>
+  <Travel>
+    <Id>3</Id>
+    <Name>Hồ Gươm</Name>
+    <Adress>Hà Nội, Việt Nam</Adress>
+    <Year>0</Year>
+    <Descriptions>Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên nằm ở trung tâm thành phố Hà Nội. Hồ có diện tích khoảng 12 ha. Trước kia, hồ còn có các tên gọi là hồ Lục Thủy, hồ Thủy Quân, hồ Tả Vọng và Hữu Vọng</Descriptions>
+    <Emotions>Hồ Gươm như một lẵng hoa xinh đẹp nằm giữa lòng thành phố. Sự tích cái tên Hồ Gươm hay còn gọi là hồ Hoàn Kiếm đã gắn liền với gần ngàn năm lịch sử của đất Thăng Long.</Emotions>
+  </Travel>
+</ArrayOfTravel>

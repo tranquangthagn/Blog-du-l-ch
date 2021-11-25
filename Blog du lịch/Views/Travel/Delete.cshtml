@@ -1,13 +1,14 @@
 ﻿@model Blog_du_lịch.Models.Travel
 
 @{
-    ViewData["Title"] = Model.Name;
+    ViewData["Title"] = "Confirm";
 }
 
-<h1>Travel around Viet Nam</h1>
+<h1>Confirm</h1>
 
+<h3>Bạn có chắc chắn muốn xóa bài viết này????</h3>
 <div>
-    <h4>Travel</h4>
+    <h4>@Model.Name</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -47,8 +48,10 @@
             @Html.DisplayFor(model => model.Emotions)
         </dd>
     </dl>
-</div>
-<div>  
-    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-danger">Xóa</a>
-    <a asp-action="Index" class ="btn btn-sm btn-outline-Secondary">Quay trở lại trang trước</a>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id"/> 
+        <input type="submit" value="Xóa" class="btn btn-danger" /> |
+        <a asp-action="Index">Quay lại trang trước</a>
+    </form>
 </div>

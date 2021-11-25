@@ -50,9 +50,10 @@
             </td>
             <td>
                 <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info"> Chi tiết </a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Xóa</a>
             </td>
         </tr>
 }
-<tr><td colspan="10">Sum: @Model.Count()</td></tr>
+<tr><td colspan="10">Tổng có: @Model.Count() khu du lịch</td></tr>
     </tbody>
 </table>
