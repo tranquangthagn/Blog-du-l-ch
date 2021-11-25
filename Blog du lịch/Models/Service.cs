@@ -41,30 +41,30 @@ namespace Blog_du_lịch.Models
         }
 
         public Travel[] Get() => Travels.ToArray();
-        public Travel Get(int id) => Travels.FirstOrDefault(s => s.Id == id);
+        public Travel Get(int id) => Travels.FirstOrDefault(trv => trv.Id == id);
         public bool Add(Travel travel) =>Travels.Add(travel);
         public Travel Create()
         {
-            var m = Travels.Max(s => s.Id);
-            var s = new Travel()
+            var m = Travels.Max(trv => trv.Id);
+            var trv = new Travel()
             {
 
                 Id = m++
             };
 
-            return s;
+            return trv;
         }
 
         public bool Update(Travel travel)
         {
-            var s = Get(travel.Id);
-            return (s != null && Travels.Remove(s) && Travels.Add(travel));
+            var trv = Get(travel.Id);
+            return (trv != null && Travels.Remove(trv) && Travels.Add(travel));
         }
 
         public bool Delete(int id)
         {
-            var s = Get(id);
-            return (s != null && Travels.Remove(s));
+            var trv = Get(id);
+            return (trv != null && Travels.Remove(trv));
         }
 
         public void SaveChanges()

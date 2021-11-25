@@ -16,4 +16,20 @@
     <Descriptions>Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên nằm ở trung tâm thành phố Hà Nội. Hồ có diện tích khoảng 12 ha. Trước kia, hồ còn có các tên gọi là hồ Lục Thủy, hồ Thủy Quân, hồ Tả Vọng và Hữu Vọng</Descriptions>
     <Emotions>Hồ Gươm như một lẵng hoa xinh đẹp nằm giữa lòng thành phố. Sự tích cái tên Hồ Gươm hay còn gọi là hồ Hoàn Kiếm đã gắn liền với gần ngàn năm lịch sử của đất Thăng Long.</Emotions>
   </Travel>
+  <Travel>
+    <Id>0</Id>
+    <Name>Bãi đá Sông Hồng</Name>
+    <Adress>Hà Nội, Việt Nam</Adress>
+    <Year>2021</Year>
+    <Descriptions>Quá là đẹp luonnnn</Descriptions>
+    <Emotions>Chưa đi bao giờ</Emotions>
+  </Travel>
+  <Travel>
+    <Id>0</Id>
+    <Name>My Home</Name>
+    <Adress>Hanoi</Adress>
+    <Year>299999</Year>
+    <Descriptions>Beautiful</Descriptions>
+    <Emotions>Funny</Emotions>
+  </Travel>
 </ArrayOfTravel>

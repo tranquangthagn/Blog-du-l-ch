@@ -21,15 +21,15 @@ namespace Blog_du_lịch.Controllers
         }
         public IActionResult Details(int id)
         {
-            var s = _service.Get(id);
-            if (s == null) 
+            var trv = _service.Get(id);
+            if (trv == null) 
             {
                 return NotFound();
             }
             
             else
             {
-                return View(s);
+                return View(trv);
             }
         }    
 
@@ -54,6 +54,45 @@ namespace Blog_du_lịch.Controllers
             _service.Delete(travel.Id);
             _service.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var trv = _service.Get(id);
+            if(trv == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return View(trv);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Travel travel)
+        {
+            if (ModelState.IsValid)
+            {
+                _service.Update(travel);
+                _service.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(travel);
+        }
+
+        public IActionResult Create() => View(_service.Create());
+        [HttpPost]
+        public IActionResult Create(Travel travel)
+        {
+            if (ModelState.IsValid)
+            {
+                _service.Add(travel);
+                _service.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(travel);
         }
     }
 }

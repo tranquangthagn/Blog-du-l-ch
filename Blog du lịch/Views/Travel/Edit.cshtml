@@ -1,0 +1,64 @@
+﻿@model Blog_du_lịch.Models.Travel
+
+@{
+    ViewData["Title"] = $"Chỉnh sửa {Model.Name}";
+}
+
+<p class = "h1"> Bạn đang chỉnh sửa: <strong> @Model.Name </strong> </p>
+<hr />
+<form asp-action = "Chỉnh sửa" enctype = "multiart / form-data">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adress" class="control-label"></label>
+                <input asp-for="Adress" class="form-control" />
+                <span asp-validation-for="Adress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year" class="control-label"></label>
+                <input asp-for="Year" class="form-control" />
+                <span asp-validation-for="Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descriptions" class="control-label"></label>
+                <input asp-for="Descriptions" class="form-control" />
+                <span asp-validation-for="Descriptions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Emotions" class="control-label"></label>
+                <input asp-for="Emotions" class="form-control" />
+                <span asp-validation-for="Emotions" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>*@
+            <div class = "form-group">
+               <input type = "file" name = "file" />
+               <input type = "hidden" asp-for = "DataFile" />
+           </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+   <div class = "form-group">
+        <input type = "submit" value = "Lưu" class = "btn btn-sm btn-outline-primary" /> |
+        <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-info"> Hủy </a> |
+        <a asp-action="Index" class="btn btn-sm btn-outline-secondary"> Quay lại danh sách </a>
+   </div>
+</form>

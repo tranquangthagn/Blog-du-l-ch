@@ -5,6 +5,9 @@
 }
 
 <p> Travels Blog</p>
+<div class="mb-3">
+    <a asp-action="Create" class="btn btn-outline-primary">Tạo bài viết mới</a>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -51,6 +54,7 @@
             <td>
                 <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info"> Chi tiết </a>
                 <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Xóa</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning">Chỉnh sửa</a>
             </td>
         </tr>
 }
