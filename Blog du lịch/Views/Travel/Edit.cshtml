@@ -6,16 +6,10 @@
 
 <p class = "h1"> Bạn đang chỉnh sửa: <strong> @Model.Name </strong> </p>
 <hr />
-<form asp-action = "Chỉnh sửa" enctype = "multiart / form-data">
+<form asp-action = "Edit" enctype = "multiart / form-data">
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            @*<div class="form-group">
-                <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" class="form-control" />
-                <span asp-validation-for="Id" class="text-danger"></span>
-            </div>*@
+    <input type = "hidden" asp-for = "Id" />
+    <div class="col-md-4">    
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
@@ -41,14 +35,11 @@
                 <input asp-for="Emotions" class="form-control" />
                 <span asp-validation-for="Emotions" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>*@
             <div class = "form-group">
                <input type = "file" name = "file" />
                <input type = "hidden" asp-for = "DataFile" />
            </div>
-        </form>
+           <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     </div>
 </div>
 
@@ -57,7 +48,7 @@
 }
 
    <div class = "form-group">
-        <input type = "submit" value = "Lưu" class = "btn btn-sm btn-outline-primary" /> |
+        <input type="submit" name="Lưu" value="Save" class="btn btn-primary" />|
         <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-info"> Hủy </a> |
         <a asp-action="Index" class="btn btn-sm btn-outline-secondary"> Quay lại danh sách </a>
    </div>
