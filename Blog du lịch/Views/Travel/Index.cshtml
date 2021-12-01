@@ -1,21 +1,62 @@
 ﻿@model IEnumerable<Blog_du_lịch.Models.Travel>
+<link rel="stylesheet" href="~/lib/font/themify-icons-font/themify-icons/themify-icons.css">
 
-@{
-    ViewData["Title"] = "Travels in Việt Nam";
-}
+@{ ViewData["Title"] = "Travels in Việt Nam"; }
+@*-------------------------The first introduction-----------------------------*@
+<style>
+    .box {
+        color: white;
+    }
+</style>
 
-<p> Travels Blog</p>
-<div class="mb-3">
-    <a asp-action="Create" class="btn btn-outline-primary">Tạo bài viết mới</a>
+<div class="Main-brand">
+    <div class=" Main-brand_intro">
+        <div class="brand-icon">
+            <i class="Main-brand-icon ti-layout-grid2-alt"></i>
+        </div>
+        <div class="bran-title">
+            <span class="Main-brand-text"> DU LỊCH AN TOÀN </span>
+            <span> Nâng cao sức khỏe , cân bằng cuộc sống </span>
+        </div>
+    </div>
+    <div class=" Main-brand_suggest">
+
+        <div class="brand-icon">
+            <i class="Main-brand-icon ti-world"></i>
+        </div>
+        <div class="bran-title">
+            <span class="Main-brand-text"> TRẢI NGHIỆM KÌ NGHỈ TUYỆT VỜI </span>
+            <span> Lên rừng xuống biển. Trọn vẹn Việt Nam </span>
+        </div>
+    </div>
+    <div class=" Main-brand_contact">
+        <div class="brand-icon">
+            <i class="Main-brand-icon ti-headphone-alt"></i>
+        </div>
+        <div class="bran-title">
+            <span class="Main-brand-text">HOTLINE TƯ VẤN  </span>
+            <span class="tranthang" ><a href="tel:+84 1909001">(+84) 1909001</a> </span>
+        </div>
+    </div>
 </div>
+
+<script>
+    var numberMove = document.querySelector(".Main-brand_contact span a ");
+    console.log(numberMove);
+    setInterval(() => {
+        numberMove.classList.toggle('box');
+    }, 1000);
+</script>
+@*-------------------------The first introduction-----------------------------*@
 <table class="table">
     <thead>
         <tr>
             @*<th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>*@
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Name)
+
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Adress)
@@ -33,7 +74,8 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 <a asp-route-id="@item.Id" asp-action="Details">@item.Name</a>
@@ -41,7 +83,7 @@
             <td>
                 @item.Adress
             </td>
-             <td>
+            <td>
                 @item.Year
             </td>
 
@@ -53,14 +95,9 @@
             </td>
             <td>
                 <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info"> Chi tiết </a>
-                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Xóa</a>
-                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-warning">Chỉnh sửa</a>
-                <a asp-action="Read" asp-route-id="@item.Id" class="btn btn-sm btn-outline-dark"> Đọc thêm </a>
-
-
             </td>
         </tr>
 }
-<tr><td colspan="10">Tổng có: @Model.Count() khu du lịch</td></tr>
+        <tr><td colspan="10">Sum: @Model.Count()</td></tr>
     </tbody>
 </table>

@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\css\NewFolder\**" />
+    <Content Remove="wwwroot\css\NewFolder\**" />
+    <EmbeddedResource Remove="wwwroot\css\NewFolder\**" />
+    <None Remove="wwwroot\css\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Data\" />
   </ItemGroup>
 
