@@ -25,7 +25,6 @@ namespace Blog_du_lịch.Models
 
         [DisplayName(" Cảm xúc về địa điểm du lịch đó ")]
         public string Emotions { get; set; }
-        public string DataFile { get; set; }
 
     }
 }
