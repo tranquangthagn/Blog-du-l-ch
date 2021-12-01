@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -42,66 +41,36 @@ namespace Blog_du_lịch.Models
         }
 
         public Travel[] Get() => Travels.ToArray();
-        public Travel Get(int id) => Travels.FirstOrDefault(trv => trv.Id == id);
+        public Travel Get(int id) => Travels.FirstOrDefault(s => s.Id == id);
         public bool Add(Travel travel) =>Travels.Add(travel);
         public Travel Create()
         {
-            var m = Travels.Max(trv => trv.Id);
-            var trv = new Travel()
+            var m = Travels.Max(s => s.Id);
+            var s = new Travel()
             {
 
                 Id = m++
             };
 
-            return trv;
+            return s;
         }
 
         public bool Update(Travel travel)
         {
-            var trv = Get(travel.Id);
-            return (trv != null && Travels.Remove(trv) && Travels.Add(travel));
+            var s = Get(travel.Id);
+            return (s != null && Travels.Remove(s) && Travels.Add(travel));
         }
 
         public bool Delete(int id)
         {
-            var trv = Get(id);
-            return (trv != null && Travels.Remove(trv));
+            var s = Get(id);
+            return (s != null && Travels.Remove(s));
         }
 
         public void SaveChanges()
         {
             using var stream = File.Create(_dataFile);
             _serializer.Serialize(stream, Travels);
-        }
-
-        public string GetDataPath(string file) => $"Data\\{file}";
-
-        public void Upload(Travel travel, IFormFile file)
-        {
-            if (file != null)
-            {
-                var path = GetDataPath(file.FileName);
-                using var stream = new FileStream(path, FileMode.Create);
-                file.CopyTo(stream);
-                travel.DataFile = file.FileName;
-            }
-        }
-
-        public (Stream, string) Download(Travel trv)
-        {
-            var memory = new MemoryStream();
-            using var stream = new FileStream(GetDataPath(trv.DataFile), FileMode.Open);
-            stream.CopyTo(memory);
-            memory.Position = 0;
-            var type = Path.GetExtension(trv.DataFile) switch
-            {
-                "pdf" => "application/pdf",
-                "docx" => "application/vnd.ms-word",
-                "doc" => "application/vnd.ms-word",
-                "txt" => "text/plain",
-                _ => "application/pdf"
-            };
-            return (memory, type);
         }
 
 

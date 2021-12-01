@@ -1,0 +1,269 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #00bcd412;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+/*-------------------Header----------------------------*/
+
+.header_travel {
+    background-color: #003C71;
+    max-width: 100%;
+    height: 54px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header_travel-roll {
+}
+
+.header_travel-nav {
+    height: 54px;
+}
+
+.container-travel-list > .container-travel-item {
+    display: inline-block;
+}
+
+.container-travel {
+    display: inline-block;
+}
+
+.navbar-brand-title {
+    line-height: 54px;
+    font-size: 24px;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+    .navbar-brand-title:hover {
+        text-decoration: none;
+        color: #00C1DE;
+    }
+
+.container-travel-link {
+    line-height: 54px;
+    font-size: 16px;
+    color: white;
+    padding: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+    .container-travel-link:hover {
+        text-decoration: none;
+        color: #00C1DE;
+    }
+
+
+
+
+/*-----------------END--Header----------------------------*/
+.slice-travel {
+    width: 1150px;
+    margin:auto;
+    overflow: hidden;
+    margin-top: 70px;
+    border-radius: 10px;
+   position:relative;
+}
+
+.silce-img {
+    width: 9999px;
+    transition: all 1.5s;
+}
+img {
+    width: 1150px;
+    height: 70vh;
+    float:left;
+}
+.controler-img_icon {
+    top: 48%;
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.controler-img_icon span:first-child {
+    width: 50px;
+    background-color: #d2d2d285;
+    padding-left: 6px;
+}
+ .controler-img_icon .slice-img-right {
+       margin-left: 1018px;
+       background-color: #d2d2d285;
+       padding: 0 6px 0 20px;
+  }
+.controler-img_icon .slice-img-right:hover {
+     cursor: pointer;
+     background-color: #d2d2d2d4;
+  }
+.controler-img_icon .slice-img-left:hover {
+   cursor: pointer;
+   background-color: #d2d2d2d4;
+ }
+    /*T---------------------Main-------------------------*/
+/*---------------------For ---All------------*/
+.Main-brand-icon {
+    font-size: 24px;
+    color: white;
+}
+
+.Main-brand-text {
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+}
+
+/*---------------------For ---All------------*/
+.Main-brand {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.Main-brand_intro {
+    background: #072152;
+    margin-left: -35px;
+    min-width: 300px;
+    display: inline-flex;
+    padding: 20px 30px 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.brand-icon {
+    align-self: center;
+    padding-right: 15px;
+}
+
+.bran-title {
+    position: relative;
+    align-self: center;
+    top: -3px;
+}
+/*------------------------*/
+.Main-brand_intro span {
+    display: block;
+    font-size: 14px;
+    color: white;
+}
+
+.Main-brand_suggest {
+    background: #072152;
+    min-width: 300px;
+    display: inline-flex;
+    padding: 20px 30px 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.Main-brand_contact {
+    display: inline-flex;
+    background: #072152;
+    margin-right: -35px;
+    min-width: 300px;
+    padding: 20px 30px 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.Main-brand_suggest span {
+    display: block;
+    font-size: 14px;
+    color: white;
+}
+
+.Main-brand_contact span {
+    display: block;
+    font-size: 14px;
+    color: white;
+}
+
+    .Main-brand_contact span a {
+        display: block;
+        font-size: 14px;
+    }
+
+        .Main-brand_contact span a:hover {
+            text-decoration: none;
+        }
+
+
+/*T-----------------END----Main-------------------------*/
